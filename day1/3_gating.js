@@ -29,12 +29,11 @@ if (true) {
 
 let age = 39;
 
-if (age > 38) {
-  console.log("middle aged");
-} else (age > 65) {
+if (age > 65) {
   console.log("senior");
+} else if (age > 38) {
+  console.log("middle aged");
 }
-
 
 
 
