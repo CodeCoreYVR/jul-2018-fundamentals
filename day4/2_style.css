@@ -1,0 +1,19 @@
+/* external css */
+/* css rule */
+/* h1 = selector */
+/* {} = declaration */
+/* color = css properties */
+/* pink = value */
+h1 {
+  color: lavender;
+  background-color: hotpink;
+  font-family: sans-serif;
+}
+h2 {
+  color: brown;
+  background-color: orange;
+}
+p {
+  color: lightgreen;
+  background-color: firebrick;
+}

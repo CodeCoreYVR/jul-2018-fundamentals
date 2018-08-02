@@ -24,4 +24,17 @@ ticTacToe[2][2] = "X";
 // X wins!!!
 
 
+// hi arturo
+
+// start with this
+const me = new Object();
+me.name = "Jacob";
+
+
+// then show this
+const me = {
+  
+};
+
+
 //
