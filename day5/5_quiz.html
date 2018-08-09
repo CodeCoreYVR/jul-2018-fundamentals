@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS</title>
+    <style>
+      /* li {
+        font-family: cursive;
+      }
+      .item {
+        font-family: fantasy;
+      } */
+      ol li {
+        font-family: sans-serif;
+      }
+      /* ol must be the parent of li, direct descendant */
+      ol > li {
+        font-family: monospace;
+      }
+      /* li[class=item] */
+      input[type=text] {
+
+      }
+      * {
+        border: thin red solid;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type="text">
+      <input type="password">
+      <input type="submit">
+    </form>
+    <ol>
+      <!-- kebab notation -->
+      <li class="item">milk</li>
+      <li class="item"><div><li>eggs</li></div></li>
+      <li class="item">butter</li>
+      <ul>
+        <li>cheese</li>
+      </ul>
+    </ol>
+
+    <ul>
+      <!-- kebab notation -->
+      <li class="item">milk</li>
+      <li class="item">eggs</li>
+      <li class="item">butter</li>
+    </ul>
+  </body>
+</html>

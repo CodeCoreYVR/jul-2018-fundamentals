@@ -1,0 +1,58 @@
+<!-- layout demo  -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Layout</title>
+    <link href="https://fonts.googleapis.com/css?family=Hanalei+Fill" rel="stylesheet">
+    <style>
+
+      /* targetting id's we use # */
+      #red {
+        background-color: red;
+        float: left;
+        width: 100%;
+        padding: 10px;
+        /* margin: 10px; */
+        box-sizing: border-box;
+        position: fixed;
+      }
+      #green {
+        background-color: green;
+        float: left;
+        width: 25%;
+        height: 3000px;
+      }
+      #blue {
+        background-color: blue;
+        float: left;
+        width: 75%;
+        height: 3000px;
+      }
+      #yellow {
+        background-color: yellow;
+        float: left;
+        width: 100%;
+        position: fixed;
+        /* trbl = trouble */
+        bottom: 0px;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: 'Hanalei Fill', cursive;
+        /* background-color: hotpink !important; */
+        /* border: gold dashed thick; */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="red">HEADER</div>
+    <div id="green">SIDEBAR</div>
+    <div id="blue">CONTENT</div>
+    <div id="yellow">FOOTER</div>
+  </body>
+</html>
