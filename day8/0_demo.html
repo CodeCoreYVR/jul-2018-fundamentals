@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Demo</title>
+    <!-- step 1: include the jquery library: CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+      document.write("Hello!");
+      // higher order function
+      // built-in
+      // setTimeout(function(){
+      //     document.getElementById("header").innerHTML = "Rosa was here!";
+      // }, 3000);
+
+      // events!!!!
+      // window.onload = function(){
+      //   alert("The page is done loading!");
+      // };
+      document.addEventListener("DOMContentLoaded", function(){
+        alert("The page is done loading using the document!");
+      });
+
+      // john resig's jQuery
+      // 2. wait for the page to be ready
+      $(document).ready(function(){
+        // 3. modify your page
+        $('h1').html('Kahlil was here!');
+      });
+      // $(function(){});
+    </script>
+  </head>
+  <body>
+    <h1 id="header">Jacob Tran</h1>
+  </body>
+</html>
+<script>
+  document.write("Goodbye!");
+</script>
