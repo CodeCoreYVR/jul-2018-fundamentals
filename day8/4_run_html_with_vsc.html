@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="4_run_with_vsc.css">
+    <!--
+      install a Visual Studio Code library
+      to load my pages inside a "local server".
+      "Live Server" is the name of the plugin
+     -->
+     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+     <!-- 
+      * Prevent the form from submitting
+      * display a message if the password is
+        under 5 characters long.
+    -->
+    <script src="4_run_html_with_vcs.js"></script>
+  </head>
+  <body>
+    <form id="my-first-form">
+      <div>
+        <div id="weak_password" class="error-message hide">the password is too short</div>
+        <label for="password">Visible Password</label>
+        <input type="text" name="my-password" id="password">
+      </div>
+      <div>
+        <!-- pretend we are sending the password somewhere -->
+        <button type="submit">Send password</button>
+        <a href="#" id="clear-fields">Clear Form</a>
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+<html>
+  <head>
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+      <script>
+        $(document).ready(function() { // wait until DOM is loaded
+          // This selector will look for a component with class .parent-item-1
+          // that contains another component within it with the class .parent-item-2
+          // in other words, space means inheritance
+          // (inheritance = nesting)
+          $( '.parent-item-1 .parent-item-2' ).length
+
+          // This selector will look for a component that has the class .parent-item-1
+          // and .parent-item-2.
+          // in other words, the comma "," means inclusion of multiple selectors
+          $( '.parent-item-1, .parent-item-2' ).length
+
+          // This will look for a component that has both the .parent class
+          // and the .parent-item-2.
+          $( '.parent.parent-item-2' ).length
+
+          // this will look for an element that has an id
+          // of hello-world.
+          // NOTE: MAKE SURE THAT ID VALUES ARE NOT REPEATED
+          $('#hello-world').length;
+
+          // How can i select all input fields?
+
+          // This will load all the input fields in the entire page
+          $('input').length;
+
+          // Will load all the inputs within the form with id #formy
+          $('#formy input').length;
+
+          // Without classes or ids, how can i load all the inputs
+          // that are "password" typed
+          $( 'input[type=password]' ).length
+          $( 'input[type="password"]' ).length
+          // '{html-tag}[{attribute}="{value}"]
+        })
+      </script>
+  </head>
+  <body>
+    <div id="hello-world">
+      hello world
+    </div>
+    <!-- HORRIBLE PRACTICE
+    <div id="hello-world">
+      hello world
+    </div>
+    -->
+    <!-- better :) -->
+    <div id="hello-world-2">
+        hello world 2
+      </div>
+    <div id="parent-1" class="parent parent-item-1">
+      Parent 1
+
+      <div class="parent parent-item-2">
+        parent 2
+      </div>
+      
+      <div class="child-item">
+        Child 1
+      </div>
+      <div class="child-item">
+        Child 2
+      </div>
+
+    </div>
+
+    <!--<div id="parent-2" class="parent parent-item-2">
+      parent 2
+    </div>-->
+
+    <div id="parent-3" class="parent parent-item-3">
+      parent 3
+    </div>
+    <br />
+    <br />
+    <!--
+      Latin american naming conventions.
+      Jesus Arturo - Rodriguez Ravelo
+      [First name] - [Last name]
+    -->
+    <form id="formy">
+        <div>
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" />
+        </div>
+        <div>
+          <label for="second-name">Second Name</label>
+          <input type="text" id="second-name" />
+        </div>
+        <div>
+          <label for="first-last-name">First Last Name</label>
+          <input type="text" id="first-last-name" />
+        </div>
+        <div>
+          <label for="second-last-name">Second Last Name</label>
+          <input type="text" id="second-last-name" />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" id="password" />
+        </div>
+    </form>
+    <form id="formy2">
+        <div>
+          <label for="first-name2">First Name</label>
+          <input type="text" id="first-name2" />
+        </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+  <head>
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+      <script>
+        $(document).ready(function() { // wait until DOM is loaded
+
+          // $('h1').attr works as a way to access an attribute within
+          // an element. This is also called as a getter.
+          //    Example:
+          //    $('h1').attr('id'); //
+          //
+          // $('h1').attr can also work as a way to modify the attribute
+          // we are referencing. Also called as a setter.
+          //    Example:
+          //    $('h1').attr('id', 'hello-you'); // this updates
+          //                                     // the id within the h1 tag
+
+
+
+          // $('h1').attr
+          // retrieves the value in attribute id within h1 tag 
+          $('h1').attr('id');
+
+          // 1. This will look for all the h1 tags
+          // 2. $('h1') will return a list of items
+          // 3. we use jquery .each function to loop through
+          //    each element.
+          //    https://api.jquery.com/each/#each-function
+          //    $('h1').each( fn ); // receives a function
+          // 4. 
+          const func = function(index, element){
+            console.log('----------')
+            console.log('element', element)
+            console.log('this', this)
+            console.log(`the index of this element is ${index}`);
+            console.log( `this element has the id of ${$(this).attr('id')}` )
+          };
+          $('h1').each(func);
+
+          // an example of how to change the id of the h3 tag
+          $("h3").attr('id', 'arturo-is-mocking-me');
+
+          // $('a') this will return a jquery wrapper
+          // that holds a lot of functionality. I have access to 
+          // a list of links.
+
+          // $('a')[0] this will give the html element itself (without
+          // the wrapper)
+        })
+      </script>
+  </head>
+  <body>
+    <h1 id="hello-world" class="hello-there hello-here">Hello world</h1>
+    <h1 id="hello-world2" class="hello-there hello-here">Hello world</h1>
+
+    <h3 id="rosa">Rosa is processing</h3>
+  </body>
+</html>
