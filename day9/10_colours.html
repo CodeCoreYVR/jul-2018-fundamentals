@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Colors</title>
+    <!-- 1. prove i can change the background color! -->
+    <style>
+      body {
+        /* background-color: teal; */
+      }
+    </style>
+    <!-- 3. data persist -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+      $(document).ready(function() {
+        // if the page is opened for the first time...
+        $('body').css('backgroundColor', localStorage.color);
+
+        $('form').submit(function(event){
+          event.preventDefault();
+          // localStorage.color = "orange";
+          localStorage.color = $('input').val();
+          // style.backgroundColor
+          // jquery?
+          $('body').css('backgroundColor', localStorage.color);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- 2. work on the view, interface -->
+    <h1>Color Changer</h1>
+    <form>
+      <input type="color">
+      <input type="submit">
+    </form>
+
+    <!-- <form>
+      <input type="text">
+      <input type="submit">
+    </form> -->
+
+  </body>
+</html>

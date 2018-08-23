@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Shopping List</title>
+    <!-- 1. external library: jquery, john resig i-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+      // 2. wait for the page to load, wait for the page to be ready
+      // ready is an event.
+      // ready() is a higher order function
+      $(document).ready(function(){
+        // this page is absolutely loaded and ready!
+        // 3. is to capture the form submission event!
+        $('form').submit(function(event){
+          // handle this event!
+          console.log("You pressed the submit button!");
+          // this prevents the form from listening to the action attribute in your HTML
+          // 4. we are preventing the default action of the form.
+          event.preventDefault();
+          // 5. append, prepend
+          // append - will add it to the end
+          // prepend - will add it to the beginning
+          // decorator
+          // 6. how do we retrieve the text that was entered into the text field.. that's what i want to add to my list!!!
+          // anytime you want to grab information from an input form element, we use the val() method.
+          // val() is a getter and a setter
+          let item = $('input').val();
+          $('ol').append('<li>' + item + '</li>');
+
+          // $('ol').append('<li>' + $('input').val() + '</li>');
+          // $('ol').append(`<li>${ $('input').val() }</li>`);
+        });
+      });
+      //
+      //
+      //
+      //
+    </script>
+  </head>
+  <body>
+    <h1>Enter items into your shopping list:</h1>
+    <form action="http://safeway.com">
+      <input type="text">
+      <input type="submit">
+    </form>
+
+    <h1>Things to buy:</h1>
+    <ol>
+    </ol>
+  </body>
+</html>

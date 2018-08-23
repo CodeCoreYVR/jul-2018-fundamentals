@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Session Storage</title>
+    <!-- cookies, sessions storage, local storage -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+      $(document).ready(function(){
+        if (isNaN(localStorage.counter)) {
+          localStorage.counter = 0;
+        } else {
+          localStorage.counter++;
+        }
+        $('h2').html(localStorage.counter);
+        // use local storage to store a colour choice
+        // set the background colour of your page to that colour choice
+        // if i close chrome and reopen your page, i would like to see the last colour chosen!
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Page Counter</h1>
+    <h2>0</h2>
+  </body>
+</html>
