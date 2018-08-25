@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+
+      /*
+      // difference: dictates that const cannot change its value
+      // let allows you to change its value
+      let number = 5;
+      const number2 = 5;
+      let people = ['Jhon', 'Jane'];
+      let obj = {
+        a: 1,
+        b: 2,
+        sayHello: function() {
+          console.log('Hi there', this); // references the object
+        },
+        sayHello2: () => {
+          console.log('Hi there', this); // references the object in which it was defined (Window)
+        }
+      }
+
+      let func1 = function() {
+        // in this case, javascript places info in the function for you
+        // like `arguments` and a scope `this`
+        console.log(arguments, this);
+      }
+      let func2 = () => {
+        // in this case, javascript won't place the arguments in the function
+        // and the scope of this references the scope where it was defined
+        console.log(arguments, this);
+      }
+      func1("Hello", "World");
+      //func2("Hello", "World");
+      obj.sayHello("Hello", "World");
+      obj.sayHello2("Hello", "World");
+
+      if ( obj.a == 1 ) {
+        console.log('objt.a is equals 1');
+      }
+      if ( obj.a === 1 ) { // compares value and type
+        console.log('objt.a is equals 1');
+      }
+
+      for(let i = 0; i < people.length; i++) {
+        console.log(`we've got ${people[i]}`);
+      }
+
+      setInterval( function() { console.log('Hi there') }, 10000 );
+      setInterval( () => { console.log('Hi there') }, 10000 );
+      setInterval( () => console.log('Hi there'), 10000 );
+      */
+      $(document).ready(() => {
+
+        // define vars to use
+        const form = $('#messaging-board-form');
+        const messageBoard = $('#message-board')
+        const messageInput = $('#message');
+
+        form.on('submit', function(e) {
+          e.preventDefault();
+
+          // prevent the form from submitting
+          // get the message
+          // send the message somewhere (to the recipient) (out of scope for review)
+          // display the message
+
+          const messageValue = messageInput.val();
+          messageBoard.append(`<div>${messageValue}</div>`);
+
+        });
+      });
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+  <body>
+
+    <div class="container">
+        <form id="messaging-board-form">
+            <div class="form-group row">
+              <label for="message" class="col-sm-2 col-form-label">Message</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="message" placeholder="Say hi">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Send message</button>
+          </form>
+    </div>
+
+    <div id="message-board">
+
+    </div>
+
+  </body>
+</html>

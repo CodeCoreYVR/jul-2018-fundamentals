@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app.css">
+  </head>
+  <body>
+
+    <div class="container">
+        <form id="messaging-board-form">
+            <div class="form-group row">
+              <label for="message" class="col-sm-2 col-form-label">Message</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="message" placeholder="Say hi">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Send message</button>
+          </form>
+          <h2>Messaging Board</h2>
+          <div id="message-board"></div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
